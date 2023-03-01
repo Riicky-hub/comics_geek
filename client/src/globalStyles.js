@@ -1,6 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 import mukta from './fonts/Mukta/Mukta-Light.ttf';
 import labrada from './fonts/Labrada/Labrada-VariableFont_wght.ttf';
+import { primary } from './constants';
 
 const GlobalStyles = createGlobalStyle`
 // FONTS
@@ -32,6 +33,21 @@ const GlobalStyles = createGlobalStyle`
   select,
   a {
       -webkit-tap-highlight-color: transparent;
+  }
+`;
+
+export const Button = styled.button`
+  padding: 5px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: ${primary};
+  color: white;
+  font-weight: bold;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  font-size: 0.9rem;
+  &:hover {
+    background-color: #EE171F;
   }
 `;
 

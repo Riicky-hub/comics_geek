@@ -4,16 +4,11 @@ import styled from 'styled-components';
 export const NavbarContainer = styled.div`
   display: flex;
   align-items: flex-start;
-  background: rgb(41,1,26);
-  background: -moz-linear-gradient(180deg, rgba(41,1,26,1) 65%, rgba(41,1,26,0) 90%);
-  background: -webkit-linear-gradient(180deg, rgba(41,1,26,1) 65%, rgba(41,1,26,0) 90%);
-  background: linear-gradient(180deg, rgba(41,1,26,1) 65%, rgba(41,1,26,0) 90%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#29011a",endColorstr="#29011a",GradientType=1);
+  background: #222;
   width: 100%;
   max-width: '1300px';
-  padding: 0 50px;
+  padding: 20px 50px;
   margin: 0 auto;
-  height: 140px;
   h3, p, li {
     color: white
   }
@@ -24,7 +19,6 @@ export const NavbarContent = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding-top: 10px;
 `;
 
 export const NavbarLogo = styled.div`
@@ -43,7 +37,7 @@ export const NavbarLogo = styled.div`
 
 export const NavbarList = styled.div`
   min-width: 400px;
-  width: 45%;
+  width: 35%;
   ul {
     display: flex;
     justify-content: space-between;

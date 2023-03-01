@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../../assets/logo_mini.png';
-import SearchIcon from '@mui/icons-material/Search';
 import UserMenu from './UserMenu/UserMenu';
 import { useNavigate } from 'react-router-dom';
 import { NavbarContainer, NavbarLogo, NavbarList, NavbarContent } from './styles';
@@ -21,9 +20,6 @@ const Navbar = () => {
             <li onClick={() => goto('/heroes')}>Personagens</li>
             <li>Quadrihos</li>
             <li>Eventos</li>
-            <li onClick={() => goto('/heroes')}>
-              <SearchIcon />
-            </li>
           </ul>
         </NavbarList>
         <div>

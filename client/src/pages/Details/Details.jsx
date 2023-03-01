@@ -5,7 +5,7 @@ import { publicKey } from '../../constants';
 import { CircularProgress } from '@mui/material';
 import { Image } from './styles';
 
-const Hero = () => {
+const Details = () => {
   // http://gateway.marvel.com/v1/public/characters/${id}?apikey=${publicKey}
   const { id } = useParams();
   const [hero, setHero] = useState();
@@ -29,4 +29,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Details;
