@@ -36,7 +36,7 @@ export default function InputSubscription() {
           variant='plain'
           color='danger'
           sx={{ '--Input-decorator-childHeight': '45px' }}
-          placeholder='Seu e-mail aqui...'
+          placeholder='Newsletter...'
           type='email'
           required
           value={data.email}

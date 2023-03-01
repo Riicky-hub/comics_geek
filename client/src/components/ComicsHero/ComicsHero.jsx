@@ -7,8 +7,10 @@ import 'swiper/css';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper';
 
+// https://gateway.marvel.com:443/v1/public/comics?orderBy=${order}&limit=${limit}&apikey=${publicKey}
+
 const Comic = ({ limit, order = 'focDate' }) => {
-  const url = `https://gateway.marvel.com:443/v1/public/comics?orderBy=${order}&limit=${limit}&apikey=${publicKey}`;
+  const url = `https://gateway.marvel.com:443/v1/public/comics?startYear=2023&orderBy=${order}&limit=${limit}&apikey=${publicKey}`;
   const [comics, setComics] = useState();
   useEffect(() => {
     const fetchAll = async () => {
