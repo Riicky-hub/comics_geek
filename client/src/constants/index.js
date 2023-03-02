@@ -8,6 +8,7 @@ export const hash = md5(`${timeStamp}${privateKey}${publicKey}`);
 // COLORS
 export const bgNavbar = '#29011A';
 export const primary = '#D3232F';
+export const second = '#7C7C7C';
 
 // FONT SIZES
 export const sm = '17px';

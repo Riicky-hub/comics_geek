@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from '../../components';
+import { Navbar, Footer } from '../../components';
 import { Hero, Latest, Characters } from '../../layouts';
 
 const Homepage = () => {
@@ -9,6 +9,7 @@ const Homepage = () => {
       <Hero />
       <Latest />
       <Characters />
+      <Footer />
     </div>
   );
 };

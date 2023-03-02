@@ -41,4 +41,5 @@ export const Text = styled.div`
   color: white;
   text-align: center;
   font-size: ${sm};
+  font-weight: bold;
 `;
