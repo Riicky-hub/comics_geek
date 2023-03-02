@@ -4,7 +4,6 @@ export const Container = styled.div`
   display: flex;
   justify-content: flex-start;
   width: 100%;
-  max-width: '1300px';
   padding: 20px 50px;
   margin: 0 auto;
   .search {

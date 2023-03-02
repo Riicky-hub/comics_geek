@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar } from '../../components';
-import { Hero, Latest } from '../../layouts';
+import { Hero, Latest, Characters } from '../../layouts';
 
 const Homepage = () => {
   return (
@@ -8,6 +8,7 @@ const Homepage = () => {
       <Navbar />
       <Hero />
       <Latest />
+      <Characters />
     </div>
   );
 };
