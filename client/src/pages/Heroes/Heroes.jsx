@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { timeStamp, publicKey, hash } from '../../constants';
 import { CircularProgress } from '@mui/material';
 import { ContainerItems, Container } from './styles';
-import { ShopItem, SearchBar, Navbar } from '../../components';
+import { Hero, SearchBar, Navbar } from '../../components';
 import axios from 'axios';
 
-const Shop = () => {
+const Heroes = () => {
   const [url, setUrl] = useState(
     `https://gateway.marvel.com:443/v1/public/characters?ts=${timeStamp}&apikey=${publicKey}&hash=${hash}`,
   );
@@ -28,10 +28,10 @@ const Shop = () => {
       <Navbar />
       <Container>
         <SearchBar searchKey={setSearch} event={searchText} id='search' />
-        <ContainerItems id='display'>{!heroes ? <CircularProgress /> : <ShopItem data={heroes} />}</ContainerItems>
+        <ContainerItems id='display'>{!heroes ? <CircularProgress /> : <Hero data={heroes} />}</ContainerItems>
       </Container>
     </>
   );
 };
 
-export default Shop;
+export default Heroes;

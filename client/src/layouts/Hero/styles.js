@@ -4,9 +4,8 @@ import { lg, md, sm, primary } from '../../constants';
 
 export const Container = styled.div`
   display: flex;
-  height: 570px;
+  height: 620px;
   width: 100%;
-  max-width: '1300px';
   padding: 20px 50px;
   margin: 0 auto;
   justify-content: space-between;
@@ -28,8 +27,8 @@ export const InfoContainer = styled.div`
 
 export const InfoContainer__texts = styled.div`
   height: 95%;
-  width: 70%;
-  max-width: 460px;
+  width: 80%;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -44,7 +43,7 @@ export const InfoContainer__texts = styled.div`
   }
   p {
     font-size: ${sm};
-    padding: 27px 0 30px 0;
+    padding: 20px 0 20px 0;
   }
   figcaption {
     font-size: ${sm};
@@ -55,7 +54,7 @@ export const InfoContainer__texts = styled.div`
     line-height: 30px;
     font-weight: bold;
     font-style: italic;
-    padding-bottom: 10px;
+    padding-bottom: 7px;
   }
 `;
 

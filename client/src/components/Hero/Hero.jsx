@@ -14,7 +14,7 @@ function limitText(text, length) {
   return `${limitted}...`;
 }
 
-const ShopItem = ({ data }) => {
+const Hero = ({ data }) => {
   let goto = useNavigate();
   // console.log(data);
   return (
@@ -58,4 +58,4 @@ const ShopItem = ({ data }) => {
   );
 };
 
-export default ShopItem;
+export default Hero;

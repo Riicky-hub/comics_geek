@@ -25,7 +25,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Mukta';
   }
   body {
-    background-color: gray;
+    background-color: white;
   }
   input,
   textarea,

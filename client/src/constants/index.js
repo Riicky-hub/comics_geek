@@ -10,6 +10,6 @@ export const bgNavbar = '#29011A';
 export const primary = '#D3232F';
 
 // FONT SIZES
-export const sm = '14px';
-export const md = '24px';
-export const lg = '43px';
+export const sm = '17px';
+export const md = '27px';
+export const lg = '40px';
