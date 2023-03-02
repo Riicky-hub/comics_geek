@@ -3,15 +3,22 @@ import axios from 'axios';
 import { Image, ComicsGrid__text } from './styles';
 import { publicKey } from '../../constants';
 
-const Comic = ({ limit = 1, order = 'focDate', mode = 'image' }) => {
-  const url = `https://gateway.marvel.com:443/v1/public/comics?startYear=2023&orderBy=${order}&limit=${limit}&apikey=${publicKey}`;
+const Comic = ({ limit = 1, order = 'focDate', mode = 'image', api, monthStart, monthEnd }) => {
+  let url = `https://gateway.marvel.com:443/v1/public/comics?startYear=2023&orderBy=${order}&limit=${limit}&apikey=${publicKey}`;
+  switch (api) {
+    case 'perMonth':
+      // PARA SETAR UM RANGE DE DATA USE: 'monthStart='2023-01'' e 'monthEnd='2023-02''
+      url = `https://gateway.marvel.com:443/v1/public/comics?dateRange=${monthStart}%2C${monthEnd}&orderBy=${order}&limit=${limit}&apikey=${publicKey}`;
+      break;
+  }
   const [comics, setComics] = useState();
   useEffect(() => {
-    const fetchAll = async () => {
-      const res = await axios.get(url).catch((err) => console.log(err));
-      setComics(res.data.data.results);
-    };
-    fetchAll();
+    (async () => {
+      await axios
+        .get(url)
+        .catch((err) => console.log(err))
+        .then((res) => setComics(res.data.data.results));
+    })();
   }, [url]);
   switch (mode) {
     case 'image':
