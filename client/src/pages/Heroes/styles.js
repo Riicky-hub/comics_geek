@@ -1,19 +1,18 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  padding: 20px 50px;
-  margin: 0 auto;
-  .search {
-    align-items: flex-start;
-  }
-`;
-
-export const ContainerItems = styled.div`
-  flex: 2;
+export const HeroesContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 17px;
+  padding: 30px 0 20px 0;
+`;
+export const Container = styled.div`
+  width: 100%;
+  padding: 20px 70px;
+  margin: 0 auto;
+`;
+export const InputContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;

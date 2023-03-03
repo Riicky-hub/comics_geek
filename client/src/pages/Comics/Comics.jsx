@@ -13,6 +13,7 @@ const Comics = () => {
   const [order, setOrder] = useState('-focDate');
   const [data, setData] = useState('');
   const [search, setSearch] = useState('');
+
   useEffect(() => {
     // order, limit, offset, type, search, startYear, months
     // PARA SETAR UM RANGE DE DATA USE: 'months='2023-01,2022-01''
@@ -24,13 +25,13 @@ const Comics = () => {
   if (comics === undefined) {
     return 'Waiting Data...';
   }
-
   const handleChangeOrder = (event) => {
     setOrder(event.target.value);
   };
   const handleChangeDate = (event) => {
     setData(event.target.value);
   };
+
   return (
     <>
       <Navbar />
