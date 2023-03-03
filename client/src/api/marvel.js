@@ -1,6 +1,6 @@
 import { publicKey } from '../constants';
 import axios from 'axios';
-const fetch = async (order, limit = 1, offset, type, search, startYear, monthStart, monthEnd) => {
+const fetch = async (order, limit = 1, offset, type, search, startYear, months) => {
   let url = ``;
   switch (type) {
     case 'character':
@@ -11,8 +11,12 @@ const fetch = async (order, limit = 1, offset, type, search, startYear, monthSta
       break;
     default:
       url = `https://gateway.marvel.com:443/v1/public/comics?apikey=${publicKey}&limit=${limit}`;
-      if (monthStart && monthEnd) {
-        url = url + `&dateRange=${monthStart}%2C${monthEnd}`;
+      if (search) {
+        url = url + `&titleStartsWith=${search}`;
+      }
+      if (months) {
+        const monthsArr = months.split(',');
+        url = url + `&dateRange=${monthsArr[0]}%2C${monthsArr[1]}`;
       }
       if (startYear) {
         url = url + `&startYear=${startYear}`;

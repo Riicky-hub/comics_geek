@@ -8,7 +8,7 @@ import fetch from '../../api/marvel';
 const Latest = () => {
   const [comics, setComics] = useState();
   useEffect(() => {
-    // order, limit, offset, type, search, startYear, monthStart, monthEnd
+    // order, limit, offset, type, search, startYear, months
     // PARA SETAR UM RANGE DE DATA USE: 'monthStart='2023-01'' e 'monthEnd='2023-02''
     fetch('focDate', 4, false, false, false, 2023).then((res) => {
       setComics(res.data.results);

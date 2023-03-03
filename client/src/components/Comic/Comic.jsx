@@ -44,7 +44,7 @@ const Comic = ({ list, mode, imageWidth }) => {
                           : `${comic.creators.items[0].name}...`}
                       </p>
                       <p>
-                        <span>{`${comic.prices[0].price}R$`}</span>
+                        <span>{`${comic.prices[0].price}$`}</span>
                       </p>
                     </ComicsGrid__text>
                   </div>

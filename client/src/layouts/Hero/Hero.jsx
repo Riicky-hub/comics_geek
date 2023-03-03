@@ -11,11 +11,13 @@ import {
 import Input from './Input/Input';
 import { Button } from '../../globalStyles';
 import fetch from '../../api/marvel';
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+  const goto = useNavigate();
   const [comics, setComics] = useState();
   useEffect(() => {
-    // order, limit, offset, type, search, startYear, monthStart, monthEnd
+    // order, limit, offset, type, search, startYear, months
     // PARA SETAR UM RANGE DE DATA USE: 'monthStart='2023-01'' e 'monthEnd='2023-02''
     fetch('-focDate', 20, false, false, false, 2023).then((res) => {
       setComics(res.data.results);
@@ -53,7 +55,7 @@ const Hero = () => {
               por novas historias dos seus hérois. Veja a lista de últimos lançamentos ou pesquise pelo seu personagem
               favorito!
             </p>
-            <Button>Ver mais</Button>
+            <Button onClick={() => goto('/comics')}>Ver mais</Button>
           </ComicsContainer__texts>
         </ComicsContainer>
       </Container>
