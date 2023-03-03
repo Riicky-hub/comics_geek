@@ -5,3 +5,4 @@ export { default as ComicsHero } from './ComicsHero/ComicsHero';
 export { default as Comic } from './Comic/Comic';
 export { default as Character } from './Character/Character';
 export { default as Footer } from './Footer/Footer';
+export { default as Filter } from './Filter/Filter';

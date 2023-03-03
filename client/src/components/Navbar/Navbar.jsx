@@ -18,7 +18,7 @@ const Navbar = () => {
         <NavbarList>
           <ul>
             <li onClick={() => goto('/heroes')}>Personagens</li>
-            <li>Quadrinhos</li>
+            <li onClick={() => goto('/comics')}>Quadrinhos</li>
             <li>Eventos</li>
           </ul>
         </NavbarList>

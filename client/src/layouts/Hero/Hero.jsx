@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { ComicsHero } from '../../components';
 import {
   Container,
@@ -10,8 +10,17 @@ import {
 } from './styles';
 import Input from './Input/Input';
 import { Button } from '../../globalStyles';
+import fetch from '../../api/marvel';
 
 const Hero = () => {
+  const [comics, setComics] = useState();
+  useEffect(() => {
+    // order, limit, offset, type, search, startYear, monthStart, monthEnd
+    // PARA SETAR UM RANGE DE DATA USE: 'monthStart='2023-01'' e 'monthEnd='2023-02''
+    fetch('-focDate', 20, false, false, false, 2023).then((res) => {
+      setComics(res.data.results);
+    });
+  }, []);
   return (
     <BgImage>
       <Container>
@@ -35,7 +44,7 @@ const Hero = () => {
         </InfoContainer>
         <ComicsContainer>
           <div style={{ width: '235px' }}>
-            <ComicsHero limit={20} order='-focDate' />
+            <ComicsHero list={comics} />
           </div>
           <ComicsContainer__texts>
             <h4>Lançamentos</h4>
