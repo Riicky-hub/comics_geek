@@ -1,7 +1,9 @@
 import React from 'react';
 import { Image, ComicsGrid__text, ComicTitle } from './styles';
+import { useNavigate } from 'react-router-dom';
 
 const Comic = ({ list, mode, imageWidth }) => {
+  const goto = useNavigate();
   let comics = list;
   if (comics === undefined) {
     return 'Waiting Data...';
@@ -28,7 +30,11 @@ const Comic = ({ list, mode, imageWidth }) => {
             <>
               {comics.map((comic) => {
                 return (
-                  <div key={comic.id} style={{ cursor: 'pointer', width: `${imageWidth ? imageWidth : '230px'}` }}>
+                  <div
+                    key={comic.id}
+                    onClick={() => goto(`/comics/${comic.id}`)}
+                    style={{ cursor: 'pointer', width: `${imageWidth ? imageWidth : '230px'}` }}
+                  >
                     <Image src={`${comic.thumbnail.path}.${comic.thumbnail.extension}`} imgWidth={imageWidth} />
                     <ComicTitle>
                       {typeof comic.characters.items[0] == 'undefined'

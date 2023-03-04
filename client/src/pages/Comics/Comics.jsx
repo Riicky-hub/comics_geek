@@ -52,8 +52,7 @@ const Comics = () => {
                   <MenuItem value='-focDate'>
                     <em>Mais recente</em>
                   </MenuItem>
-                  <MenuItem value='focDate'>Mais Antigo</MenuItem>
-                  <MenuItem value='issueNumber'>Mais Vendidos</MenuItem>
+                  <MenuItem value='issueNumber'>Mais Antigo</MenuItem>
                   <MenuItem value='title'>Titulo</MenuItem>
                   <MenuItem value='modified'>Modificado</MenuItem>
                 </Select>

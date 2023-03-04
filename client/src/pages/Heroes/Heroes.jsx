@@ -14,11 +14,10 @@ const Comics = () => {
   useEffect(() => {
     // order, limit, offset, type, search, startYear, months
     // PARA SETAR UM RANGE DE DATA USE: 'months='2023-01,2022-01''
-    fetch(order, 20, false, 'character', search, '').then((res) => {
+    fetch(order, 20, false, 'characters', search, '').then((res) => {
       setComics(res.data.results);
     });
   }, [search, order]);
-  console.log(comics);
 
   if (comics === undefined) {
     return 'Waiting Data...';
@@ -62,6 +61,7 @@ const Comics = () => {
                 key={comic.id}
                 name={comic.name}
                 image={`${comic.thumbnail.path}.${comic.thumbnail.extension}`}
+                id={comic.id}
               />
             );
           })}

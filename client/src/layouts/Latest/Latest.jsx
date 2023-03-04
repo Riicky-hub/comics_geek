@@ -4,7 +4,6 @@ import { month1, month2, month3 } from '../../assets/latest';
 import { Container, Title, Comics, MonthContainer, Image, ImageContainer, ImageIcon } from './styles';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import fetch from '../../api/marvel';
-
 const Latest = () => {
   const [comics, setComics] = useState();
   useEffect(() => {

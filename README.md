@@ -3,10 +3,6 @@
 - Acesse: https://memories-riickyhub.vercel.app/
 - Projeto com intuito de passar no teste prático da Brisanet
 
-## Screenshots 📷
-
-![App Screenshot]()
-
 ## Stack utilizada 🧑‍💻
 
 | Front-end               | Back-end                                                |
@@ -24,18 +20,21 @@
 
 ### Requisitados:
 - Comsumir e listar os quadrinhos/hérois da API
-- Usar um model para detalhes ou leitura
+- Usar uma página para detalhes
 - Selecionar o endereço de entraga utilizando Google Maps
-### Extras:
+### Futuras:
+- Responsividade
 - Animações
 - Autenticação de usuários
+- Efetuar compras
+- Demo de leitura das comics
+- Comentarios/feedbacks
 
 ## Referência 🔖
 
 #### *- Tento fazer sempre meus projetos, respeitando a propriedade intelectual de seus devidos criadores*
 
 ### Design(Figma):  
-- [Nickelfox Design](https://www.figma.com/community/file/1071329609544017092)  
 - [Yoann TERUEL](https://www.figma.com/community/file/1094015754993438424)
 
 ### API(Marvel):  

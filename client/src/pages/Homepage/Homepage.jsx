@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navbar, Footer } from '../../components';
-import { Hero, Latest, Characters } from '../../layouts';
+import { Hero, Latest, CharactersHero } from '../../layouts';
 
 const Homepage = () => {
   return (
@@ -8,7 +8,7 @@ const Homepage = () => {
       <Navbar />
       <Hero />
       <Latest />
-      <Characters />
+      <CharactersHero />
       <Footer />
     </>
   );
