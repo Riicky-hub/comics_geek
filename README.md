@@ -1,4 +1,4 @@
-# Geek Comics 📚
+# Comics Geek 📚
 
 - Acesse: https://memories-riickyhub.vercel.app/
 - Projeto com intuito de passar no teste prático da Brisanet
